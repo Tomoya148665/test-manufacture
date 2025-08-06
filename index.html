@@ -1,0 +1,1149 @@
+
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>株式会社テクノ製作所 | 精密機械加工のプロフェッショナル</title>
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Noto Sans JP', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background: #f5f5f5;
+}
+
+/* ヘッダー */
+.header-top {
+    background: #404040;
+    color: #fff;
+    padding: 8px 0;
+    font-size: 13px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.header-top .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.contact-info {
+    display: flex;
+    gap: 30px;
+}
+
+header {
+    background: #fff;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+}
+
+.logo {
+    font-size: 26px;
+    font-weight: bold;
+    color: #333;
+    text-decoration: none;
+}
+
+.nav-menu {
+    display: flex;
+    list-style: none;
+    gap: 35px;
+}
+
+.nav-menu a {
+    text-decoration: none;
+    color: #555;
+    font-weight: 500;
+    font-size: 15px;
+    padding: 10px 0;
+    position: relative;
+    transition: color 0.3s;
+}
+
+.nav-menu a:hover {
+    color: #0073aa;
+}
+
+.nav-menu a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: #0073aa;
+    transition: width 0.3s;
+}
+
+.nav-menu a:hover::after {
+    width: 100%;
+}
+
+/* ヒーローセクション */
+.hero {
+    background: 
+        linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.4)),
+        url('image/hero.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    color: #fff;
+    padding: 180px 0;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: 
+        repeating-linear-gradient(
+            90deg,
+            transparent,
+            transparent 100px,
+            rgba(255,255,255,0.02) 100px,
+            rgba(255,255,255,0.02) 200px
+        ),
+        repeating-linear-gradient(
+            0deg,
+            transparent,
+            transparent 100px,
+            rgba(255,255,255,0.02) 100px,
+            rgba(255,255,255,0.02) 200px
+        );
+    z-index: 1;
+}
+
+.hero .container {
+    position: relative;
+    z-index: 2;
+}
+
+.hero h1 {
+    font-size: 46px;
+    margin-bottom: 20px;
+    font-weight: 600;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+.hero p {
+    font-size: 20px;
+    margin-bottom: 35px;
+    font-weight: 300;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+}
+
+.btn-primary {
+    display: inline-block;
+    background: #0073aa;
+    color: #fff;
+    padding: 14px 35px;
+    text-decoration: none;
+    border-radius: 3px;
+    font-weight: 500;
+    transition: background 0.3s;
+    font-size: 16px;
+}
+
+.btn-primary:hover {
+    background: #005a87;
+}
+
+/* サービスセクション */
+.services {
+    padding: 80px 0;
+    background: #fff;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 34px;
+    margin-bottom: 15px;
+    color: #333;
+    font-weight: 500;
+}
+
+.section-subtitle {
+    text-align: center;
+    color: #666;
+    margin-bottom: 50px;
+    font-size: 16px;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 30px;
+    margin-top: 50px;
+}
+
+.service-card {
+    background: #fafafa;
+    padding: 40px 30px;
+    border: 1px solid #e5e5e5;
+    text-align: center;
+    transition: box-shadow 0.3s;
+}
+
+.service-card:hover {
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+}
+
+.service-card h3 {
+    font-size: 22px;
+    margin-bottom: 20px;
+    color: #333;
+    font-weight: 600;
+}
+
+.service-card p {
+    color: #666;
+    line-height: 1.8;
+}
+
+/* 実績セクション */
+.stats {
+    background: #0073aa;
+    padding: 70px 0;
+    color: #fff;
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 40px;
+    text-align: center;
+}
+
+.stat-number {
+    font-size: 42px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.stat-label {
+    font-size: 16px;
+    opacity: 0.9;
+}
+
+/* ニュースセクション */
+.news {
+    padding: 80px 0;
+    background: #f5f5f5;
+}
+
+/* 代表メッセージセクション */
+.message {
+    padding: 80px 0;
+    background: #fff;
+}
+
+.message-content {
+    max-width: 900px;
+    margin: 50px auto 0;
+}
+
+.message-text {
+    background: #fafafa;
+    padding: 50px;
+    border-left: 4px solid #0073aa;
+}
+
+.message-text h3 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 30px;
+    font-weight: 600;
+}
+
+.message-text p {
+    color: #666;
+    line-height: 1.8;
+    margin-bottom: 20px;
+    font-size: 16px;
+}
+
+.message-signature {
+    margin-top: 40px;
+    text-align: right;
+}
+
+.signature-title {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 5px;
+}
+
+.signature-name {
+    font-size: 18px;
+    color: #333;
+    font-weight: 600;
+}
+
+/* 技術・強みセクション */
+.technology {
+    padding: 80px 0;
+    background: #f5f5f5;
+}
+
+.tech-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(480px, 1fr));
+    gap: 30px;
+    margin-top: 50px;
+}
+
+.tech-card {
+    background: #fff;
+    padding: 35px 35px 35px 40px;
+    border: 1px solid #e5e5e5;
+    transition: box-shadow 0.3s;
+    position: relative;
+    overflow: hidden;
+}
+
+.tech-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 4px;
+    height: 100%;
+    background: linear-gradient(to bottom, #0073aa, #005a87);
+}
+
+.tech-card:hover {
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+}
+
+.tech-card:nth-child(1)::before {
+    background: linear-gradient(to bottom, #5e72e4, #825ee4);
+}
+
+.tech-card:nth-child(2)::before {
+    background: linear-gradient(to bottom, #2dce89, #11cdef);
+}
+
+.tech-card:nth-child(3)::before {
+    background: linear-gradient(to bottom, #f5365c, #f56565);
+}
+
+.tech-card:nth-child(4)::before {
+    background: linear-gradient(to bottom, #fb6340, #fbb140);
+}
+
+.tech-card h3 {
+    font-size: 20px;
+    color: #333;
+    margin-bottom: 15px;
+    font-weight: 600;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.tech-card p {
+    color: #666;
+    line-height: 1.8;
+    font-size: 15px;
+}
+
+/* 品質保証体制セクション */
+.quality {
+    padding: 80px 0;
+    background: #fff;
+}
+
+.quality-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 40px;
+    margin-top: 50px;
+}
+
+.quality-item {
+    text-align: center;
+    padding: 30px 20px;
+    border: 1px solid #e5e5e5;
+    background: #fafafa;
+    transition: transform 0.3s, box-shadow 0.3s;
+    position: relative;
+    overflow: hidden;
+}
+
+.quality-item::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, #0073aa, #005a87);
+}
+
+.quality-item:nth-child(1)::before {
+    background: linear-gradient(90deg, #5e72e4, #825ee4);
+}
+
+.quality-item:nth-child(2)::before {
+    background: linear-gradient(90deg, #2dce89, #11cdef);
+}
+
+.quality-item:nth-child(3)::before {
+    background: linear-gradient(90deg, #f5365c, #f56565);
+}
+
+.quality-item:nth-child(4)::before {
+    background: linear-gradient(90deg, #fb6340, #fbb140);
+}
+
+.quality-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    background: #fff;
+}
+
+.quality-item h3 {
+    font-size: 20px;
+    color: #333;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+.quality-item p {
+    color: #666;
+    line-height: 1.7;
+    font-size: 14px;
+}
+
+/* 設備紹介セクション */
+.equipment {
+    padding: 80px 0;
+    background: #f5f5f5;
+}
+
+.equipment-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 30px;
+    margin-top: 50px;
+}
+
+.equipment-card {
+    background: #fff;
+    border: 1px solid #e5e5e5;
+    padding: 0;
+    transition: box-shadow 0.3s;
+    overflow: hidden;
+}
+
+.equipment-card:hover {
+    box-shadow: 0 3px 12px rgba(0,0,0,0.1);
+}
+
+.equipment-image {
+    height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-size: 48px;
+    position: relative;
+    overflow: hidden;
+}
+
+.equipment-image-1 {
+    background: linear-gradient(135deg, #5e72e4 0%, #825ee4 100%);
+}
+
+.equipment-image-2 {
+    background: linear-gradient(135deg, #fb6340 0%, #fbb140 100%);
+}
+
+.equipment-image-3 {
+    background: linear-gradient(135deg, #11cdef 0%, #1171ef 100%);
+}
+
+.equipment-image-4 {
+    background: linear-gradient(135deg, #2dce89 0%, #2dcecc 100%);
+}
+
+.equipment-image-5 {
+    background: linear-gradient(135deg, #f5365c 0%, #f56565 100%);
+}
+
+.equipment-image-6 {
+    background: linear-gradient(135deg, #172b4d 0%, #1a174d 100%);
+}
+
+.equipment-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: relative;
+    z-index: 1;
+}
+
+.equipment-image::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: 
+        repeating-linear-gradient(
+            90deg,
+            transparent,
+            transparent 30px,
+            rgba(255,255,255,0.1) 30px,
+            rgba(255,255,255,0.1) 31px
+        ),
+        repeating-linear-gradient(
+            0deg,
+            transparent,
+            transparent 30px,
+            rgba(255,255,255,0.1) 30px,
+            rgba(255,255,255,0.1) 31px
+        );
+}
+
+.equipment-details {
+    padding: 25px;
+}
+
+.equipment-card h3 {
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 20px;
+    font-weight: 600;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.equipment-specs p {
+    color: #666;
+    line-height: 1.6;
+    font-size: 14px;
+    margin-bottom: 8px;
+}
+
+.equipment-specs p:first-child {
+    font-weight: 600;
+    color: #0073aa;
+    margin-bottom: 12px;
+}
+
+.equipment-footer {
+    text-align: center;
+    margin-top: 40px;
+    padding-top: 30px;
+    border-top: 1px solid #ddd;
+}
+
+.equipment-footer p {
+    color: #666;
+    font-size: 15px;
+    margin-bottom: 10px;
+}
+
+.news-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 30px;
+    margin-top: 50px;
+}
+
+.news-card {
+    background: #fff;
+    border: 1px solid #e5e5e5;
+    transition: box-shadow 0.3s;
+}
+
+.news-card:hover {
+    box-shadow: 0 3px 12px rgba(0,0,0,0.1);
+}
+
+.news-image {
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    position: relative;
+    overflow: hidden;
+}
+
+.news-image-1 {
+    background: linear-gradient(135deg, #5e72e4 0%, #825ee4 100%);
+}
+
+.news-image-2 {
+    background: linear-gradient(135deg, #f5365c 0%, #f56565 100%);
+}
+
+.news-image-3 {
+    background: linear-gradient(135deg, #2dce89 0%, #11cdef 100%);
+}
+
+.news-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: relative;
+    z-index: 1;
+}
+
+.news-image::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: 
+        repeating-linear-gradient(
+            45deg,
+            transparent,
+            transparent 10px,
+            rgba(255,255,255,0.05) 10px,
+            rgba(255,255,255,0.05) 20px
+        );
+}
+
+.news-content {
+    padding: 25px;
+}
+
+.news-date {
+    color: #999;
+    font-size: 13px;
+    margin-bottom: 10px;
+}
+
+.news-title {
+    font-size: 20px;
+    color: #333;
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+.news-excerpt {
+    color: #666;
+    line-height: 1.7;
+    margin-bottom: 20px;
+    font-size: 15px;
+}
+
+/* CTAセクション */
+.cta {
+    background: #333;
+    padding: 70px 0;
+    text-align: center;
+    color: #fff;
+}
+
+.cta h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+    font-weight: 500;
+}
+
+.cta p {
+    font-size: 17px;
+    margin-bottom: 30px;
+    opacity: 0.9;
+}
+
+.btn-secondary {
+    display: inline-block;
+    background: #fff;
+    color: #333;
+    padding: 14px 35px;
+    text-decoration: none;
+    border-radius: 3px;
+    font-weight: 500;
+    transition: background 0.3s;
+}
+
+.btn-secondary:hover {
+    background: #f0f0f0;
+}
+
+/* フッター */
+footer {
+    background: #222;
+    color: #ccc;
+    padding: 50px 0 20px;
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 40px;
+    margin-bottom: 40px;
+}
+
+.footer-widget h3 {
+    margin-bottom: 20px;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.footer-widget ul {
+    list-style: none;
+}
+
+.footer-widget ul li {
+    margin-bottom: 10px;
+    font-size: 14px;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding-top: 30px;
+    border-top: 1px solid #333;
+    color: #666;
+    font-size: 14px;
+}
+
+/* レスポンシブ */
+@media (max-width: 768px) {
+    .nav-menu {
+        display: none;
+    }
+
+    .hero h1 {
+        font-size: 32px;
+    }
+
+    .hero p {
+        font-size: 16px;
+    }
+
+    .header-top .container {
+        flex-direction: column;
+        gap: 10px;
+        text-align: center;
+    }
+
+    .contact-info {
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    .section-title {
+        font-size: 28px;
+    }
+
+    .message-text {
+        padding: 30px 20px;
+    }
+
+    .tech-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .equipment-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .news-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .footer-content {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+}
+</style>
+</head>
+<body>
+<!-- ヘッダートップ -->
+<div class="header-top">
+<div class="container">
+    <div class="contact-info">
+        <span>TEL: 03-3736-2841</span>
+        <span>info@techno-factory.jp</span>
+    </div>
+    <div>営業時間: 平日 9:00-18:00</div>
+</div>
+</div>
+
+<!-- ヘッダー -->
+<header>
+<nav class="container">
+    <a href="#" class="logo">テクノ製作所</a>
+    <ul class="nav-menu">
+        <li><a href="#">ホーム</a></li>
+    </ul>
+</nav>
+</header>
+
+<!-- ヒーローセクション -->
+<section class="hero">
+<div class="container">
+    <h1>精密機械加工のプロフェッショナル</h1>
+    <p>最新技術と職人の技が融合した、高品質な製品をお届けします</p>
+    <a href="#" class="btn-primary">お見積もりはこちら</a>
+</div>
+</section>
+
+<!-- 代表メッセージセクション -->
+<section class="message">
+<div class="container">
+    <h2 class="section-title">代表メッセージ</h2>
+    <div class="message-content">
+        <div class="message-text">
+            <h3>お客様の「不可能」を「可能」に変える</h3>
+            <p>創業以来50年、私たちテクノ製作所は日本のものづくりを支える一翼を担ってまいりました。</p>
+            <p>一般産業用部品から、深海探査機器、そして高い信頼性が求められる航空宇宙関連部品まで、幅広い分野でお客様の挑戦を技術で支えています。「この材料は加工が難しい」「この精度は実現できない」そんな困難な課題にこそ、私たちの真価が問われると考えています。</p>
+            <p>これからも社員一人ひとりが技術者としての誇りを持ち、新たな価値創造に挑戦し続けることで、お客様と共に成長していく企業であり続けます。次の50年も、日本の製造業の発展に貢献してまいります。</p>
+            <div class="message-signature">
+                <p class="signature-title">株式会社テクノ製作所</p>
+                <p class="signature-name">代表取締役社長　山田 太郎</p>
+            </div>
+        </div>
+    </div>
+</div>
+</section>
+
+<!-- サービスセクション -->
+<section class="services">
+<div class="container">
+    <h2 class="section-title">私たちのサービス</h2>
+    <p class="section-subtitle">50年の実績と最新設備で、お客様のニーズにお応えします</p>
+    
+    <div class="services-grid">
+        <div class="service-card">
+            <h3>精密機械加工</h3>
+            <p>NC旋盤、マシニングセンタを駆使した高精度な加工を実現。公差±0.001mmの精密加工に対応します。</p>
+        </div>
+        
+        <div class="service-card">
+            <h3>金型設計・製作</h3>
+            <p>3D CAD/CAMを活用した効率的な金型設計。試作から量産まで一貫してサポートいたします。</p>
+        </div>
+        
+        <div class="service-card">
+            <h3>量産対応</h3>
+            <p>小ロットから大量生産まで柔軟に対応。品質管理システムで安定した品質をお約束します。</p>
+        </div>
+    </div>
+</div>
+</section>
+
+<!-- 実績セクション -->
+<section class="stats">
+<div class="container">
+    <div class="stats-grid">
+        <div class="stat-item">
+            <div class="stat-number">50</div>
+            <div class="stat-label">創業年数</div>
+        </div>
+        <div class="stat-item">
+            <div class="stat-number">300+</div>
+            <div class="stat-label">取引先企業</div>
+        </div>
+        <div class="stat-item">
+            <div class="stat-number">30,000+</div>
+            <div class="stat-label">累計製造件数</div>
+        </div>
+        <div class="stat-item">
+            <div class="stat-number">99.7%</div>
+            <div class="stat-label">品質保証率</div>
+        </div>
+    </div>
+</div>
+</section>
+
+<!-- 技術・強みセクション -->
+<section class="technology">
+<div class="container">
+    <h2 class="section-title">私たちの技術と強み</h2>
+    <p class="section-subtitle">他社では困難な加工も、私たちの技術で実現します</p>
+    
+    <div class="tech-grid">
+        <div class="tech-card">
+            <h3>航空宇宙分野での実績</h3>
+            <p>国際宇宙ステーションに採用された部品製造実績。極限環境下でも機能する高信頼性部品を、厳格な品質管理のもと製造しています。JAXA認定工場として、ロケット部品の製造も手がけています。</p>
+        </div>
+        
+        <div class="tech-card">
+            <h3>次世代モビリティへの貢献</h3>
+            <p>電気自動車のバッテリーケースから自動運転センサー部品まで、次世代の移動手段を支える重要部品を製造。軽量化と高強度を両立する溶接技術で、未来の車づくりに貢献しています。</p>
+        </div>
+        
+        <div class="tech-card">
+            <h3>特殊材料の精密加工</h3>
+            <p>チタン合金、インコネル、ハステロイなどの難削材加工を得意としています。医療機器や半導体製造装置など、特殊環境で使用される部品の超精密加工に対応可能です。</p>
+        </div>
+        
+        <div class="tech-card">
+            <h3>独自の複合加工技術</h3>
+            <p>絞り加工を使用しない溶接構造化技術により、金型費用を削減しながら深さのあるケースを製作。試作から量産まで、お客様のコスト削減と短納期化を実現します。</p>
+        </div>
+    </div>
+</div>
+</section>
+
+<!-- ニュースセクション -->
+<section class="news">
+<div class="container">
+    <h2 class="section-title">最新ニュース</h2>
+    <p class="section-subtitle">企業の最新情報をお届けします</p>
+    
+    <div class="news-grid">
+        <article class="news-card">
+            <div class="news-image news-image-1">
+                <img src="image/新5軸加工機.jpg" alt="新型5軸加工機">
+            </div>
+            <div class="news-content">
+                <div class="news-date">2025年1月15日</div>
+                <h3 class="news-title">新型5軸加工機を導入しました</h3>
+                <p class="news-excerpt">より複雑な形状の加工が可能になり、納期短縮と品質向上を実現。最新鋭の設備により、お客様のご要望にさらに柔軟に対応できるようになりました。</p>
+            </div>
+        </article>
+        
+        <article class="news-card">
+            <div class="news-image news-image-2">
+                <img src="image/ISO9001.png" alt="ISO 9001:2015 認証">
+            </div>
+            <div class="news-content">
+                <div class="news-date">2025年1月10日</div>
+                <h3 class="news-title">ISO 9001:2015 認証を更新</h3>
+                <p class="news-excerpt">品質マネジメントシステムの国際規格認証を更新し、さらなる品質向上へ。継続的な改善活動により、お客様の信頼にお応えします。</p>
+            </div>
+        </article>
+        
+    </div>
+</div>
+</section>
+
+<!-- 品質保証体制セクション -->
+<section class="quality">
+<div class="container">
+    <h2 class="section-title">品質保証体制</h2>
+    <p class="section-subtitle">最高品質を約束する、徹底した管理体制</p>
+    
+    <div class="quality-grid">
+        <div class="quality-item">
+            <h3>ISO認証取得</h3>
+            <p>ISO 9001:2015（品質マネジメント）およびISO 14001:2015（環境マネジメント）を取得。国際規格に準拠した品質管理システムで、安定した品質をお約束します。</p>
+        </div>
+        
+        <div class="quality-item">
+            <h3>全数検査体制</h3>
+            <p>重要保安部品については全数検査を実施。三次元測定機による精密測定と、熟練検査員による目視検査のダブルチェック体制を構築しています。</p>
+        </div>
+        
+        <div class="quality-item">
+            <h3>トレーサビリティ管理</h3>
+            <p>材料調達から出荷まで、全工程の履歴を管理。製造ロット番号により、いつ、誰が、どの設備で製造したかを追跡可能。万全のアフターフォロー体制を整えています。</p>
+        </div>
+        
+        <div class="quality-item">
+            <h3>継続的改善活動</h3>
+            <p>月次品質会議での不適合分析、QCサークル活動による改善提案、定期的な内部監査の実施により、品質の継続的な向上に取り組んでいます。</p>
+        </div>
+    </div>
+</div>
+</section>
+
+<!-- 設備紹介セクション -->
+<section class="equipment">
+<div class="container">
+    <h2 class="section-title">主要設備</h2>
+    <p class="section-subtitle">最新鋭の設備と熟練の技術で、高品質な製品を生み出します</p>
+    
+    <div class="equipment-grid">
+        <div class="equipment-card">
+            <div class="equipment-image equipment-image-1">
+                <img src="image/5軸加工機.png" alt="5軸制御マシニングセンタ">
+            </div>
+            <div class="equipment-details">
+                <h3>5軸制御マシニングセンタ</h3>
+                <div class="equipment-specs">
+                    <p>DMG MORI DMU 50 3rd Generation</p>
+                    <p>加工範囲：φ650×500mm</p>
+                    <p>主軸回転数：18,000rpm</p>
+                    <p>複雑形状部品の高精度加工に対応</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="equipment-card">
+            <div class="equipment-image equipment-image-2">
+                <img src="image/CNC複合旋盤.jpg" alt="CNC複合旋盤">
+            </div>
+            <div class="equipment-details">
+                <h3>CNC複合旋盤</h3>
+                <div class="equipment-specs">
+                    <p>オークマ MULTUS B300II</p>
+                    <p>最大加工径：φ350mm</p>
+                    <p>最大加工長：600mm</p>
+                    <p>ミーリング機能付きで複雑形状に対応</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="equipment-card">
+            <div class="equipment-image equipment-image-3">
+                <img src="image/ワイヤー放電加工機.webp" alt="ワイヤー放電加工機">
+            </div>
+            <div class="equipment-details">
+                <h3>ワイヤー放電加工機</h3>
+                <div class="equipment-specs">
+                    <p>三菱電機 MV2400R</p>
+                    <p>最大加工サイズ：600×400×300mm</p>
+                    <p>加工精度：±0.002mm</p>
+                    <p>超硬材料の精密加工が可能</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="equipment-card">
+            <div class="equipment-image equipment-image-4">
+                <img src="image/三次元測定機.jpg" alt="三次元測定機">
+            </div>
+            <div class="equipment-details">
+                <h3>三次元測定機</h3>
+                <div class="equipment-specs">
+                    <p>カールツァイス CONTURA G2</p>
+                    <p>測定範囲：700×700×600mm</p>
+                    <p>測定精度：1.5+L/350μm</p>
+                    <p>温度管理された検査室に設置</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="equipment-card">
+            <div class="equipment-image equipment-image-5">
+                <img src="image/レーザー溶接機.webp" alt="レーザー溶接機">
+            </div>
+            <div class="equipment-details">
+                <h3>レーザー溶接機</h3>
+                <div class="equipment-specs">
+                    <p>トルンプ TruLaser Cell 3000</p>
+                    <p>レーザー出力：4kW</p>
+                    <p>溶接速度：最大10m/min</p>
+                    <p>薄板の高速精密溶接に対応</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="equipment-card">
+            <div class="equipment-image equipment-image-6">
+                <img src="image/クリーンルーム.jpg" alt="クリーンルーム">
+            </div>
+            <div class="equipment-details">
+                <h3>クリーンルーム</h3>
+                <div class="equipment-specs">
+                    <p>クラス10000（ISO 7相当）</p>
+                    <p>面積：200㎡</p>
+                    <p>温度：23±2℃、湿度：50±10%</p>
+                    <p>医療機器・半導体部品の組立に対応</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="equipment-footer">
+        <p>その他、NC旋盤15台、マシニングセンタ20台、各種プレス機、表面処理設備等を保有</p>
+        <p>月産能力：精密部品 約10万個</p>
+    </div>
+</div>
+</section>
+
+<!-- CTAセクション -->
+<section class="cta">
+<div class="container">
+    <h2>お客様のご要望にお応えします</h2>
+    <p>まずはお気軽にご相談ください。専門スタッフが丁寧に対応いたします。</p>
+    <a href="#" class="btn-secondary">無料相談はこちら</a>
+</div>
+</section>
+
+<!-- フッター -->
+<footer>
+<div class="container">
+    <div class="footer-content">
+        <div class="footer-widget">
+            <h3>会社情報</h3>
+            <ul>
+                <li>株式会社テクノ製作所</li>
+                <li>創業：1975年</li>
+                <li>資本金：5,000万円</li>
+                <li>従業員数：120名</li>
+            </ul>
+        </div>
+        
+        <div class="footer-widget">
+            <h3>サービス</h3>
+            <ul>
+                <li>精密機械加工</li>
+                <li>金型設計・製作</li>
+                <li>量産対応</li>
+                <li>品質保証</li>
+            </ul>
+        </div>
+        
+        <div class="footer-widget">
+            <h3>お問い合わせ</h3>
+            <ul>
+                <li>東京都大田区仲六郷1-2-3</li>
+                <li>TEL: 03-3736-2841</li>
+                <li>FAX: 03-3736-2842</li>
+                <li>info@techno-factory.jp</li>
+            </ul>
+        </div>
+        
+        <div class="footer-widget">
+            <h3>営業情報</h3>
+            <ul>
+                <li>営業時間：9:00-18:00</li>
+                <li>定休日：土日祝日</li>
+                <li>年末年始休業</li>
+                <li>夏季休業あり</li>
+            </ul>
+        </div>
+    </div>
+    
+    <div class="footer-bottom">
+        <p>&copy; 2025 株式会社テクノ製作所. All Rights Reserved.</p>
+    </div>
+</div>
+</footer>
+</body>
+</html>
